@@ -6,7 +6,7 @@ users = dict()
 cables = ['5x6','5x10','3x1,5','3x2,5','3x4','3x10','5x16']
 print('zdes ok')
 
-@bot.message_handler(context_types=['text'])
+@bot.message_handler(content_types=['text'])
 def get_text_messages(message):
     print('event srabotalo')
     cable = random.choice(cables)
