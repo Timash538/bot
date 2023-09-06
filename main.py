@@ -8,11 +8,8 @@ print('zdes ok')
 
 @bot.message_handler(commands=['cable'])
 def get_text_messages(message):
-    print('event srabotalo')
     if message.from_user.id not in users:
-        print('if srabotalo')
         cable = random.choice(cables)
-        print(cable)
         users[message.from_user.id] = cable
     text = 'Твой кабель: ' + users.get(message.from_user.id)
     bot.send_message(message.chat.id, text)
